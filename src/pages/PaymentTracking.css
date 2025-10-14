@@ -195,11 +195,9 @@
   padding: 0.5rem;
   margin: 0 auto 0.25rem auto;
   box-shadow: 0 1px 3px var(--shadow);
-  width: fit-content;
+  width: 100%;
+  max-width: 900px;
   display: block;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .calendar-header {
@@ -315,7 +313,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
-  min-height: 120px;
+  min-height: 100px;
 }
 
 .calendar-day:hover {
@@ -1001,6 +999,35 @@
 }
 
 @media (max-width: 768px) {
+  .payment-calendar {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
+    overflow-x: visible;
+  }
+  
+  .calendar-grid {
+    width: 100%;
+  }
+  
+  .calendar-day {
+    min-height: 60px;
+    padding: 0.25rem;
+  }
+  
+  .day-number {
+    font-size: 0.7rem;
+  }
+  
+  .statement-bar {
+    height: 10px;
+  }
+  
+  .payment-dot {
+    width: 5px;
+    height: 5px;
+  }
+  
   .billing-cycle-explanation {
     padding: 1.5rem;
   }
