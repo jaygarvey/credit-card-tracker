@@ -823,7 +823,11 @@
   }
   
   .combined-rewards .separator {
-    display: none;
+    display: none !important;
+  }
+  
+  .separator {
+    display: none !important;
   }
 }
 
