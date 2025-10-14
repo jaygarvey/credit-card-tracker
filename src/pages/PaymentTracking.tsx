@@ -653,49 +653,95 @@ const PaymentTracking: React.FC = () => {
                                   ...statementEnds.map(period => ({ ...period, type: 'close' }))
                                 ];
                                 
-                                // Calculate height for each marker - increased for mobile to fit text
-                                const markerHeight = 56;
-                                const markerGap = 3;
+                                // Check if mobile (simple check based on marker count and available space)
+                                const isMobile = window.innerWidth <= 768;
                                 
-                                // Position from bottom upward instead of top downward
-                                return allImportantDates.map((period, idx) => {
-                                  const fromBottom = idx * (markerHeight + markerGap) + 2;
-                                  const bottomPosition = `${fromBottom}px`;
+                                if (isMobile) {
+                                  // Mobile: Position from bottom upward
+                                  const markerHeight = 56;
+                                  const markerGap = 3;
                                   
-                                  if (period.type === 'due') {
-                                    return (
-                                      <div 
-                                        key={`due-${period.cardId}-${idx}`}
-                                        className="due-date-marker"
-                                        style={{ 
-                                          borderColor: period.cardColor,
-                                          bottom: bottomPosition,
-                                          top: 'auto',
-                                          height: `${markerHeight}px`
-                                        }}
-                                        title={`${period.cardName} payment due${period.isPaid ? ' (Paid)' : ''}`}
-                                      >
-                                        <span className="due-text">{period.cardName}<br/>{format(period.statementStart, 'MMM')} Statement Due</span>
-                                      </div>
-                                    );
-                                  } else {
-                                    return (
-                                      <div 
-                                        key={`end-${period.cardId}-${idx}`}
-                                        className="statement-end-marker" 
-                                        style={{ 
-                                          backgroundColor: period.cardColor,
-                                          bottom: bottomPosition,
-                                          top: 'auto',
-                                          height: `${markerHeight}px`
-                                        }}
-                                        title={`${period.cardName} statement closes`}
-                                      >
-                                        <span className="end-text">{period.cardName}<br/>{format(period.statementStart, 'MMM')} Statement Closes</span>
-                                      </div>
-                                    );
-                                  }
-                                });
+                                  return allImportantDates.map((period, idx) => {
+                                    const fromBottom = idx * (markerHeight + markerGap) + 2;
+                                    const bottomPosition = `${fromBottom}px`;
+                                    
+                                    if (period.type === 'due') {
+                                      return (
+                                        <div 
+                                          key={`due-${period.cardId}-${idx}`}
+                                          className="due-date-marker"
+                                          style={{ 
+                                            borderColor: period.cardColor,
+                                            bottom: bottomPosition,
+                                            top: 'auto',
+                                            height: `${markerHeight}px`
+                                          }}
+                                          title={`${period.cardName} payment due${period.isPaid ? ' (Paid)' : ''}`}
+                                        >
+                                          <span className="due-text">{period.cardName}<br/>{format(period.statementStart, 'MMM')} Statement Due</span>
+                                        </div>
+                                      );
+                                    } else {
+                                      return (
+                                        <div 
+                                          key={`end-${period.cardId}-${idx}`}
+                                          className="statement-end-marker" 
+                                          style={{ 
+                                            backgroundColor: period.cardColor,
+                                            bottom: bottomPosition,
+                                            top: 'auto',
+                                            height: `${markerHeight}px`
+                                          }}
+                                          title={`${period.cardName} statement closes`}
+                                        >
+                                          <span className="end-text">{period.cardName}<br/>{format(period.statementStart, 'MMM')} Statement Closes</span>
+                                        </div>
+                                      );
+                                    }
+                                  });
+                                } else {
+                                  // Desktop: Position from top downward with proper spacing
+                                  const startTop = 20 + (statementBarCount * 20) + 5;
+                                  const markerHeight = 32;
+                                  
+                                  return allImportantDates.map((period, idx) => {
+                                    const topPosition = startTop + idx * (markerHeight + 2);
+                                    
+                                    if (period.type === 'due') {
+                                      return (
+                                        <div 
+                                          key={`due-${period.cardId}-${idx}`}
+                                          className="due-date-marker"
+                                          style={{ 
+                                            borderColor: period.cardColor,
+                                            top: `${topPosition}px`,
+                                            bottom: 'auto',
+                                            height: `${markerHeight}px`
+                                          }}
+                                          title={`${period.cardName} payment due${period.isPaid ? ' (Paid)' : ''}`}
+                                        >
+                                          <span className="due-text">{period.cardName}<br/>{format(period.statementStart, 'MMM')} Statement Due</span>
+                                        </div>
+                                      );
+                                    } else {
+                                      return (
+                                        <div 
+                                          key={`end-${period.cardId}-${idx}`}
+                                          className="statement-end-marker" 
+                                          style={{ 
+                                            backgroundColor: period.cardColor,
+                                            top: `${topPosition}px`,
+                                            bottom: 'auto',
+                                            height: `${markerHeight}px`
+                                          }}
+                                          title={`${period.cardName} statement closes`}
+                                        >
+                                          <span className="end-text">{period.cardName}<br/>{format(period.statementStart, 'MMM')} Statement Closes</span>
+                                        </div>
+                                      );
+                                    }
+                                  });
+                                }
                               })()}
                             </>
                           )}
