@@ -1,0 +1,608 @@
+/* Card Details Popup Styles */
+.card-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.card-popup-content {
+  background: var(--card-bg);
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 40px var(--shadow);
+  animation: slideUp 0.3s ease-out;
+}
+
+.card-popup-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--bg-tertiary);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  z-index: 10;
+  color: var(--text-primary);
+}
+
+.card-popup-close:hover {
+  background: var(--border-color);
+}
+
+.card-popup-header {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid var(--border-color);
+  gap: 20px;
+}
+
+.card-popup-image {
+  width: 120px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-popup-title h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.card-popup-issuer {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.card-popup-annual-fee {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.fee-amount {
+  font-weight: 700;
+  color: var(--error);
+}
+
+.card-popup-body {
+  padding: 24px;
+}
+
+.card-popup-section {
+  margin-bottom: 32px;
+}
+
+.card-popup-section:last-child {
+  margin-bottom: 0;
+}
+
+.card-popup-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 8px;
+}
+
+/* Sign-up Bonus Styles */
+.signup-bonus {
+  background: linear-gradient(135deg, var(--accent), var(--accent));
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.signup-bonus p {
+  color: white;
+}
+
+.bonus-points .points-amount,
+.bonus-credit .credit-amount {
+  font-size: 32px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.bonus-description {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.bonus-requirement {
+  margin: 0;
+  font-size: 16px;
+  color: white;
+  opacity: 1;
+}
+
+/* Rewards Grid */
+.rewards-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.reward-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border-left: 4px solid var(--accent);
+}
+
+.reward-multiplier {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 60px;
+  text-align: center;
+}
+
+.reward-details {
+  margin-left: 16px;
+  flex: 1;
+}
+
+.reward-category {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.reward-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Credits List */
+.credits-list {
+  display: grid;
+  gap: 12px;
+}
+
+.credit-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border-left: 4px solid var(--success);
+  margin-bottom: 12px;
+}
+
+.credit-amount {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--success);
+  width: 120px;
+  text-align: center;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.credit-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.credit-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.credit-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Card Description */
+.card-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin: 0;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 2px solid white;
+}
+
+/* Selected card styling - High specificity to override other styles */
+.card-popup-overlay .card-popup-content.selected .card-description {
+  background: #10b981 !important;
+  color: #1a1a1a !important;
+  border: 2px solid white;
+}
+
+.card-popup-overlay .card-popup-content.selected .card-popup-title h2 {
+  color: #1a1a1a !important;
+}
+
+.card-popup-overlay .card-popup-content.selected .card-popup-issuer {
+  color: #1a1a1a !important;
+}
+
+.card-popup-overlay .card-popup-content.selected .card-popup-annual-fee {
+  color: #1a1a1a !important;
+}
+
+.card-popup-overlay .card-popup-content.selected .card-popup-section h3 {
+  color: #1a1a1a !important;
+  border-bottom: 2px solid #1a1a1a !important;
+}
+
+.card-popup-overlay .card-popup-content.selected .reward-category {
+  color: #1a1a1a !important;
+}
+
+.card-popup-overlay .card-popup-content.selected .reward-description {
+  color: #1a1a1a !important;
+}
+
+.card-popup-overlay .card-popup-content.selected .credit-name {
+  color: #1a1a1a !important;
+}
+
+.card-popup-overlay .card-popup-content.selected .credit-description {
+  color: #1a1a1a !important;
+}
+
+.card-popup-overlay .card-popup-content.selected .reward-multiplier {
+  color: #1a1a1a !important;
+}
+
+.card-popup-overlay .card-popup-content.selected .credit-amount {
+  color: #1a1a1a !important;
+}
+
+.card-popup-overlay .card-popup-content.selected .bonus-description {
+  color: #1a1a1a !important;
+}
+
+.card-popup-overlay .card-popup-content.selected .bonus-requirement {
+  color: #1a1a1a !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .card-popup-overlay {
+    padding: 10px;
+  }
+  
+  .card-popup-content {
+    max-height: 95vh;
+  }
+  
+  .card-popup-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .card-popup-image {
+    width: 100px;
+    height: 64px;
+  }
+  
+  .card-popup-title h2 {
+    font-size: 20px;
+  }
+  
+  .card-popup-body {
+    padding: 16px;
+  }
+  
+  .reward-item,
+  .credit-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .reward-details,
+  .credit-details {
+    margin-left: 0;
+  }
+}
+
+/* Preferred Rewards Section */
+.preferred-rewards-info {
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #cbd5e1;
+}
+
+.preferred-rewards-intro {
+  margin: 0 0 20px 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.preferred-rewards-tiers {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.preferred-rewards-tier {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.tier-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1e293b;
+}
+
+.tier-bonus {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tier-requirement {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.tier-results {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tier-result {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.base-rate {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  min-width: 40px;
+  text-align: center;
+}
+
+.arrow {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.bonus-rate {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  min-width: 50px;
+  text-align: center;
+}
+
+.category {
+  color: #475569;
+  font-weight: 500;
+}
+
+.preferred-rewards-note {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.preferred-rewards-note p {
+  margin: 0;
+  font-size: 13px;
+  color: #92400e;
+  line-height: 1.4;
+}
+
+/* Mobile Responsive for Preferred Rewards */
+@media (max-width: 640px) {
+  .preferred-rewards-tiers {
+    gap: 12px;
+  }
+  
+  .preferred-rewards-tier {
+    padding: 12px;
+  }
+  
+  .tier-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .tier-result {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .base-rate,
+  .bonus-rate {
+    min-width: 35px;
+    font-size: 12px;
+  }
+}
+
+/* Travel Benefits Section */
+.travel-benefits-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.travel-benefit-category {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #333;
+}
+
+.benefit-category-title {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 4px;
+}
+
+.benefit-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.benefit-item {
+  background: #2a2a2a;
+  border-radius: 6px;
+  padding: 12px;
+  border: 1px solid #444;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.benefit-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.benefit-status {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.benefit-description {
+  font-size: 13px;
+  color: #cccccc;
+  line-height: 1.4;
+}
+
+.no-benefit {
+  background: #2a2a2a;
+  border: 1px dashed #666;
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+  color: #cccccc;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Mobile Responsive for Travel Benefits */
+@media (max-width: 640px) {
+  .travel-benefits-container {
+    gap: 16px;
+  }
+  
+  .travel-benefit-category {
+    padding: 12px;
+  }
+  
+  .benefit-item {
+    padding: 10px;
+  }
+  
+  .benefit-category-title {
+    font-size: 15px;
+  }
+  
+  .benefit-name {
+    font-size: 13px;
+  }
+  
+  .benefit-description {
+    font-size: 12px;
+  }
+}

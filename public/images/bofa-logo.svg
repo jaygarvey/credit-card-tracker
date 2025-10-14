@@ -1,0 +1,8 @@
+<!-- Bank of America Logo -->
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="8" fill="#e31837"/>
+  <text x="32" y="22" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="7" font-weight="bold">Bank of</text>
+  <text x="32" y="34" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="7" font-weight="bold">America</text>
+  <text x="32" y="48" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="6">BOA</text>
+</svg>
+
