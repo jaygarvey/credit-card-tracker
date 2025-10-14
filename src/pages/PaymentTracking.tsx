@@ -646,8 +646,6 @@ const PaymentTracking: React.FC = () => {
                               {/* All important dates - fill remaining space */}
                               {(() => {
                                 const statementBarCount = statementPeriods.length;
-                                // Start after all statement bars: initial (20) + all bars stacked (count * 10) + last bar height (10) + gap (3)
-                                const startTop = statementBarCount > 0 ? 20 + (statementBarCount * 10) + 10 + 3 : 20;
                                 
                                 // Combine all important dates
                                 const allImportantDates = [
@@ -658,8 +656,10 @@ const PaymentTracking: React.FC = () => {
                                 // Calculate height for each marker - increased for 2-line text
                                 const markerHeight = 34;
                                 
+                                // Position from bottom upward instead of top downward
                                 return allImportantDates.map((period, idx) => {
-                                  const topPosition = startTop + idx * (markerHeight + 2);
+                                  const fromBottom = idx * (markerHeight + 2) + 2;
+                                  const bottomPosition = `${fromBottom}px`;
                                   
                                   if (period.type === 'due') {
                                     return (
@@ -668,7 +668,8 @@ const PaymentTracking: React.FC = () => {
                                         className="due-date-marker"
                                         style={{ 
                                           borderColor: period.cardColor,
-                                          top: `${topPosition}px`,
+                                          bottom: bottomPosition,
+                                          top: 'auto',
                                           height: `${markerHeight}px`
                                         }}
                                         title={`${period.cardName} payment due${period.isPaid ? ' (Paid)' : ''}`}
@@ -683,7 +684,8 @@ const PaymentTracking: React.FC = () => {
                                         className="statement-end-marker" 
                                         style={{ 
                                           backgroundColor: period.cardColor,
-                                          top: `${topPosition}px`,
+                                          bottom: bottomPosition,
+                                          top: 'auto',
                                           height: `${markerHeight}px`
                                         }}
                                         title={`${period.cardName} statement closes`}

@@ -1062,6 +1062,18 @@
     font-size: 0.875rem;
   }
   
+  .due-text,
+  .end-text {
+    font-size: 0.55rem;
+    line-height: 1.1;
+  }
+  
+  .due-date-marker,
+  .statement-end-marker {
+    min-height: 30px;
+    padding: 3px 2px;
+  }
+  
   .billing-cycle-explanation {
     padding: 1.5rem;
   }
