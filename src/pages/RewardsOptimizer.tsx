@@ -424,11 +424,11 @@ const RewardsOptimizer: React.FC = () => {
             points: displayPoints,
             cashBack: displayCashBack,
             cardUsed: card.name,
-            cardImage: card.imageUrl || '/images/cards/default-card.svg',
+            cardImage: card.imageUrl ? `${process.env.PUBLIC_URL}${card.imageUrl}` : `${process.env.PUBLIC_URL}/images/cards/default-card.svg`,
             cardId: card.id,
             tiedCards: tiedCards.length > 1 ? tiedCards.map(tc => ({
               cardUsed: tc.card.name,
-              cardImage: tc.card.imageUrl || '/images/cards/default-card.svg',
+              cardImage: tc.card.imageUrl ? `${process.env.PUBLIC_URL}${tc.card.imageUrl}` : `${process.env.PUBLIC_URL}/images/cards/default-card.svg`,
               cardId: tc.card.id
             })) : undefined
           };

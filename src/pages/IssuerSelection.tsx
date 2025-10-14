@@ -12,15 +12,15 @@ const IssuerSelection: React.FC = () => {
 
   const getIssuerLogo = (issuer: string) => {
     const logoMap: { [key: string]: string } = {
-      'American Express': '/images/amex-logo.png',
-      'Chase': '/images/chase-logo.png',
-      'Bank of America': '/images/bofa-logo.png',
-      'Capital One': '/images/capitalone-logo.png',
-      'Citi': '/images/citi-logo.png',
-      'Discover': '/images/discover-logo.png',
-      'Wells Fargo': '/images/wellsfargo-logo.png'
+      'American Express': `${process.env.PUBLIC_URL}/images/amex-logo.png`,
+      'Chase': `${process.env.PUBLIC_URL}/images/chase-logo.png`,
+      'Bank of America': `${process.env.PUBLIC_URL}/images/bofa-logo.png`,
+      'Capital One': `${process.env.PUBLIC_URL}/images/capitalone-logo.png`,
+      'Citi': `${process.env.PUBLIC_URL}/images/citi-logo.png`,
+      'Discover': `${process.env.PUBLIC_URL}/images/discover-logo.png`,
+      'Wells Fargo': `${process.env.PUBLIC_URL}/images/wellsfargo-logo.png`
     };
-    return logoMap[issuer] || '/images/default-logo.svg';
+    return logoMap[issuer] || `${process.env.PUBLIC_URL}/images/default-logo.svg`;
   };
 
   return (

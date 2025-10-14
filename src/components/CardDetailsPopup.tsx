@@ -40,7 +40,7 @@ const CardDetailsPopup: React.FC<CardDetailsPopupProps> = ({ card, isOpen, onClo
         
         <div className="card-popup-header">
           <img 
-            src={card.imageUrl || '/images/cards/default-card.svg'} 
+            src={card.imageUrl ? `${process.env.PUBLIC_URL}${card.imageUrl}` : `${process.env.PUBLIC_URL}/images/cards/default-card.svg`} 
             alt={card.name}
             className="card-popup-image"
           />

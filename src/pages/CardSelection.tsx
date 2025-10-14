@@ -201,7 +201,7 @@ const CardSelection: React.FC = () => {
             >
               <div className="card-image-container">
                 <img 
-                  src={card.imageUrl || '/images/cards/default-card.svg'} 
+                  src={card.imageUrl ? `${process.env.PUBLIC_URL}${card.imageUrl}` : `${process.env.PUBLIC_URL}/images/cards/default-card.svg`} 
                   alt={`${card.name} credit card`}
                   className="card-image"
                   onClick={() => handleCardImageClick(card)}

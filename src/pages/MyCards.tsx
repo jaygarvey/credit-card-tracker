@@ -152,7 +152,7 @@ const MyCards: React.FC = () => {
                     <div key={userCard.cardId} className="card-item active">
                       <div className="card-image-container">
                         <img 
-                          src={userCard.card.imageUrl || '/images/cards/default-card.svg'} 
+                          src={userCard.card.imageUrl ? `${process.env.PUBLIC_URL}${userCard.card.imageUrl}` : `${process.env.PUBLIC_URL}/images/cards/default-card.svg`} 
                           alt={userCard.card.name}
                           className="card-image"
                         />
