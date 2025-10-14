@@ -624,8 +624,8 @@ const PaymentTracking: React.FC = () => {
                                   ...statementEnds.map(period => ({ ...period, type: 'close' }))
                                 ];
                                 
-                                // Calculate height for each marker - fixed small height
-                                const markerHeight = 28;
+                                // Calculate height for each marker - increased for 2-line text
+                                const markerHeight = 34;
                                 
                                 return allImportantDates.map((period, idx) => {
                                   const topPosition = startTop + idx * (markerHeight + 2);
@@ -642,7 +642,7 @@ const PaymentTracking: React.FC = () => {
                                         }}
                                         title={`${period.cardName} payment due${period.isPaid ? ' (Paid)' : ''}`}
                                       >
-                                        <span className="due-text">{period.cardName} {format(period.statementStart, 'MMM')} Due</span>
+                                        <span className="due-text">{period.cardName}<br/>{format(period.statementStart, 'MMM')} Statement Due</span>
                                       </div>
                                     );
                                   } else {
@@ -657,7 +657,7 @@ const PaymentTracking: React.FC = () => {
                                         }}
                                         title={`${period.cardName} statement closes`}
                                       >
-                                        <span className="end-text">{period.cardName} {format(period.statementStart, 'MMM')} Closes</span>
+                                        <span className="end-text">{period.cardName}<br/>{format(period.statementStart, 'MMM')} Statement Closes</span>
                                       </div>
                                     );
                                   }

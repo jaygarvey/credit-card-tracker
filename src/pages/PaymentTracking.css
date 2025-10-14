@@ -380,7 +380,7 @@
   position: absolute;
   left: 2px;
   right: 2px;
-  min-height: 20px; /* Minimum height, can grow */
+  min-height: 32px;
   border: 2px solid;
   border-radius: 3px;
   display: flex;
@@ -388,7 +388,7 @@
   justify-content: center;
   background: var(--card-bg);
   z-index: 2;
-  padding: 4px;
+  padding: 5px 4px;
 }
 
 .due-text {
@@ -405,10 +405,10 @@
   position: absolute;
   left: 2px;
   right: 2px;
-  min-height: 20px; /* Minimum height, can grow */
+  min-height: 32px;
   color: white;
   border-radius: 3px;
-  padding: 4px;
+  padding: 5px 4px;
   z-index: 2;
   font-size: 0.5rem;
   font-weight: 600;
