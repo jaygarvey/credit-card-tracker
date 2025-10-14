@@ -629,19 +629,24 @@ const PaymentTracking: React.FC = () => {
                           {isCurrentMonth && (
                             <>
                               {/* Statement period bars */}
-                              {statementPeriods.map((period, idx) => (
-                                <div 
-                                  key={`${period.cardId}-${idx}`}
-                                  className="statement-bar"
-                                  style={{ 
-                                    backgroundColor: period.cardColor,
-                                    top: `${20 + idx * 10}px`
-                                  }}
-                                  title={`${period.cardName}: ${format(period.statementStart, 'MMM dd')} - ${format(period.statementEnd, 'MMM dd')}`}
-                                >
-                                  <span className="statement-text">{period.cardName}</span>
-                                </div>
-                              ))}
+                              {statementPeriods.map((period, idx) => {
+                                const isMobile = window.innerWidth <= 768;
+                                const barSpacing = isMobile ? 10 : 20;
+                                
+                                return (
+                                  <div 
+                                    key={`${period.cardId}-${idx}`}
+                                    className="statement-bar"
+                                    style={{ 
+                                      backgroundColor: period.cardColor,
+                                      top: `${20 + idx * barSpacing}px`
+                                    }}
+                                    title={`${period.cardName}: ${format(period.statementStart, 'MMM dd')} - ${format(period.statementEnd, 'MMM dd')}`}
+                                  >
+                                    <span className="statement-text">{period.cardName}</span>
+                                  </div>
+                                );
+                              })}
                           
                               {/* All important dates - fill remaining space */}
                               {(() => {
