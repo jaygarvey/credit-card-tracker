@@ -1,161 +1,138 @@
-# Credit Card Tracker
+# 💳 Credit Card Rewards Optimizer & Tracker
 
-A comprehensive React application that helps users optimize their credit card rewards and track payment due dates. This app allows users to select their credit cards from various issuers and provides intelligent recommendations for maximizing rewards on different spending categories.
+**Live Demo:** [https://jaygarvey.github.io/credit-card-tracker/](https://jaygarvey.github.io/credit-card-tracker/)
 
-## Features
+A free, privacy-focused tool to maximize your credit card rewards and never miss a payment.
 
-### 🏦 Card Management
-- **Issuer Selection**: Browse credit cards by issuer (American Express, Chase, Bank of America, Capital One, etc.)
-- **Card Collection**: Add cards to your personal collection with detailed reward information
-- **Card Dashboard**: View all your cards with annual fees, closing dates, and reward structures
+## ✨ Features
 
-### 💰 Rewards Optimization
-- **Smart Recommendations**: Get personalized card recommendations for different spending categories
-- **Category-Based Optimization**: Select spending categories (gas, groceries, dining, travel, etc.) to find the best card
-- **Points Calculator**: See exactly how many points you'll earn with each card for any spending amount
-- **Ranked Results**: View all your cards ranked by potential rewards
+### 🎯 Smart Rewards Optimizer
+- **Instant Recommendations**: Get the best card for any purchase
+- **Category-Specific Analysis**: Dining, groceries, travel, and more
+- **Intelligent Suggestions**: Discover new cards that match your spending
+- **Fallback Recommendations**: Even categories without specific bonuses get optimized
+- **Merchant Exceptions**: Automatically handles restrictions (e.g., Costco Visa-only)
 
-### 📅 Payment Reminders
-- **Due Date Tracking**: Automatic calculation of payment due dates based on closing dates
-- **Status Management**: Mark payments as paid/unpaid with visual status indicators
-- **Priority Alerts**: Color-coded reminders for overdue, urgent, and upcoming payments
-- **Payment Tips**: Helpful tips for managing credit card payments
+### 📊 Spending Insights
+- **Monthly Breakdown**: See exactly which cards to use for each category
+- **Optimal Rewards Calculation**: Maximize points and cash back automatically
+- **Visual Card Display**: See your cards ranked by value
+- **Tied Card Handling**: Smart recommendations when multiple cards tie
 
-## Technology Stack
+### 💰 Payment Tracking
+- **Calendar View**: Visual payment due dates
+- **Grace Period Tracking**: Never miss a payment deadline
+- **Statement Periods**: Track billing cycles for each card
+- **Payment History**: Mark payments as complete
 
-- **Frontend**: React 18 with TypeScript
-- **Routing**: React Router DOM
-- **Icons**: Lucide React
-- **Date Handling**: date-fns
-- **Styling**: Custom CSS with modern design principles
-- **Data Storage**: Local Storage for user data persistence
+### 🃏 My Cards Manager
+- **Card Collection**: Manage all your credit cards in one place
+- **Active/Inactive Status**: Control which cards appear in recommendations
+- **Quick Stats**: See total credit limit, annual fees, and active cards
+- **Beautiful Card Display**: Visual representation of your wallet
 
-## Getting Started
+### 🎨 User Experience
+- **Dark/Light Mode**: Choose your preferred theme
+- **Responsive Design**: Works perfectly on mobile and desktop
+- **Fast Performance**: Optimized React application
+- **Privacy First**: All data stored locally in your browser
 
-### Prerequisites
-- Node.js (version 14 or higher)
-- npm or yarn package manager
+## 🔒 Privacy & Security
 
-### Installation
+- ✅ **100% Client-Side**: No server, no database, no data collection
+- ✅ **Local Storage Only**: Your data never leaves your device
+- ✅ **No Tracking**: No analytics, no cookies, no third parties
+- ✅ **Secure by Design**: Built-in security headers and CSP
+- ✅ **Open Source**: Fully transparent code
 
-1. **Clone or navigate to the project directory**:
-   ```bash
-   cd credit-card-tracker
-   ```
+## 🚀 Getting Started
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+1. **Visit the app**: [https://jaygarvey.github.io/credit-card-tracker/](https://jaygarvey.github.io/credit-card-tracker/)
+2. **Select your cards**: Choose your credit card issuer and add your cards
+3. **Start optimizing**: Use the Rewards Optimizer to find the best card for each purchase
+4. **Track payments**: Never miss a due date with the payment calendar
 
-3. **Start the development server**:
-   ```bash
-   npm start
-   ```
+## 📱 Supported Cards
 
-4. **Open your browser** and navigate to `http://localhost:3000`
+### Major Issuers
+- American Express
+- Chase
+- Bank of America
+- Capital One
+- Citi
+- Discover
+- Wells Fargo
 
-### Building for Production
+### 80+ Cards Including
+- Premium travel cards (Amex Platinum, Chase Sapphire Reserve, etc.)
+- Cash back cards (Citi Double Cash, Chase Freedom, etc.)
+- Airline co-branded cards (Delta, Southwest, United, etc.)
+- Hotel co-branded cards (Marriott, Hilton, etc.)
+- Business cards and more!
 
-```bash
-npm run build
-```
+## 🛠️ Technology Stack
 
-This creates an optimized production build in the `build` folder.
+- **React 18**: Modern UI framework
+- **TypeScript**: Type-safe code
+- **React Router**: Client-side routing
+- **Lucide Icons**: Beautiful icon library
+- **CSS3**: Custom styling with dark mode support
 
-## Usage Guide
+## 💡 Use Cases
 
-### 1. Getting Started
-- Start by browsing credit card issuers on the homepage
-- Click on any issuer (e.g., "American Express") to view their available cards
+### For Beginners
+- Learn which card to use for different purchases
+- Discover cards that match your spending habits
+- Track payment due dates
 
-### 2. Adding Cards
-- Select cards you own or want to track
-- Click "Add Selected Cards" to add them to your collection
-- View your cards in the "My Cards" section
+### For Enthusiasts
+- Maximize rewards across multiple cards
+- Optimize complex card combinations
+- Track annual fees vs. rewards earned
 
-### 3. Optimizing Rewards
-- Go to "Rewards Optimizer"
-- Select a spending category (gas, groceries, dining, etc.)
-- Enter the amount you plan to spend
-- View recommendations ranked by potential rewards
+### For Everyone
+- Never miss a payment deadline
+- Make smarter spending decisions
+- Keep all your cards organized
 
-### 4. Managing Payments
-- Visit "Payment Reminders" to see upcoming due dates
-- Mark payments as paid when completed
-- Get alerts for overdue or urgent payments
+## 🌟 Why This Tool?
 
-## Card Database
+Unlike other credit card tools:
+- ✅ **Completely Free**: No subscriptions, no paywalls
+- ✅ **No Registration**: Start using immediately
+- ✅ **Privacy Focused**: Your data stays on your device
+- ✅ **Actually Smart**: Handles tied cards, merchant restrictions, and fallback scenarios
+- ✅ **Beautiful UI**: Modern, clean, and easy to use
 
-The app includes a comprehensive database of popular credit cards with:
+## 📊 Statistics
 
-- **American Express**: Gold Card, Platinum Card, Blue Cash Preferred
-- **Chase**: Sapphire Preferred, Freedom Flex, Freedom Unlimited
-- **Bank of America**: Customized Cash Rewards, Travel Rewards
-- **Capital One**: Venture Rewards, SavorOne Cash Rewards
+- **80+ Credit Cards** supported
+- **14 Spending Categories** tracked
+- **100% Privacy** guaranteed
+- **0 Servers** needed
+- **Free Forever**
 
-Each card includes:
-- Annual fees
-- Reward multipliers for different categories
-- Closing dates
-- Detailed descriptions
+## 🤝 Contributing
 
-## Data Persistence
+This is an open-source project. Feel free to:
+- Report bugs
+- Suggest new features
+- Add new credit cards
+- Improve the UI/UX
 
-Your card collection and payment status are stored locally in your browser using Local Storage. This means:
-- Your data persists between sessions
-- No account registration required
-- Data stays private on your device
+## 📄 License
 
-## Customization
+This project is free to use and modify.
 
-### Adding New Cards
-To add new credit cards, edit the `src/data.ts` file and add new entries to the `CREDIT_CARDS` array:
+## 👨‍💻 Author
 
-```typescript
-{
-  id: 'new-card-id',
-  name: 'New Credit Card',
-  issuer: 'Card Issuer',
-  annualFee: 95,
-  closingDate: 15,
-  rewards: [
-    { id: 'dining', name: 'Dining', multiplier: 3, description: '3x points on dining' },
-    { id: 'general', name: 'General', multiplier: 1, description: '1x points on all purchases' }
-  ],
-  description: 'Card description'
-}
-```
+Created by Jay Garvey
 
-### Adding New Spending Categories
-Add new spending categories in `src/data.ts`:
+## 🔗 Links
 
-```typescript
-{ id: 'new-category', name: 'New Category', description: 'Category description' }
-```
+- **Live App**: [https://jaygarvey.github.io/credit-card-tracker/](https://jaygarvey.github.io/credit-card-tracker/)
+- **GitHub**: [https://github.com/jaygarvey/credit-card-tracker](https://github.com/jaygarvey/credit-card-tracker)
 
-## Browser Support
+---
 
-This application works on all modern browsers including:
-- Chrome (recommended)
-- Firefox
-- Safari
-- Edge
-
-## Contributing
-
-Feel free to contribute to this project by:
-- Adding new credit cards to the database
-- Improving the UI/UX
-- Adding new features
-- Fixing bugs
-- Improving documentation
-
-## License
-
-This project is open source and available under the MIT License.
-
-## Support
-
-If you encounter any issues or have questions, please check the browser console for error messages and ensure all dependencies are properly installed.
-
+**Start optimizing your credit card rewards today!** 🎯💳✨
