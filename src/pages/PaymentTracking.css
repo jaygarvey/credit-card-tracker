@@ -1064,28 +1064,28 @@
   
   .due-text,
   .end-text {
-    font-size: 0.4rem;
-    line-height: 1.2;
-    font-weight: 600;
+    font-size: 0.4rem !important;
+    line-height: 1.2 !important;
+    font-weight: 600 !important;
     max-width: 100%;
-    white-space: normal;
+    white-space: normal !important;
     display: block;
   }
   
   .due-date-marker,
   .statement-end-marker {
-    min-height: 56px;
-    height: auto;
-    padding: 7px 4px;
-    left: 1px;
-    right: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 56px !important;
+    height: auto !important;
+    padding: 7px 4px !important;
+    left: 1px !important;
+    right: 1px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   
   .due-date-marker {
-    border-width: 1.5px;
+    border-width: 1.5px !important;
   }
   
   .billing-cycle-explanation {
