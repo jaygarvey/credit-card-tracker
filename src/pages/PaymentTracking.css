@@ -1065,20 +1065,24 @@
   .due-text,
   .end-text {
     font-size: 0.5rem;
-    line-height: 1.1;
+    line-height: 1.2;
     font-weight: 700;
     max-width: 100%;
     overflow-wrap: break-word;
     word-break: break-word;
+    display: block;
   }
   
   .due-date-marker,
   .statement-end-marker {
-    min-height: 38px;
+    min-height: 48px;
     height: auto;
-    padding: 4px 3px;
+    padding: 6px 4px;
     left: 1px;
     right: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .due-date-marker {

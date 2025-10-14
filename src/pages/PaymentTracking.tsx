@@ -653,9 +653,9 @@ const PaymentTracking: React.FC = () => {
                                   ...statementEnds.map(period => ({ ...period, type: 'close' }))
                                 ];
                                 
-                                // Calculate height for each marker - adjusted for mobile
-                                const markerHeight = 38;
-                                const markerGap = 2;
+                                // Calculate height for each marker - increased for mobile to fit text
+                                const markerHeight = 48;
+                                const markerGap = 3;
                                 
                                 // Position from bottom upward instead of top downward
                                 return allImportantDates.map((period, idx) => {
