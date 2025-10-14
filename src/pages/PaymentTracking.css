@@ -1064,14 +1064,21 @@
   
   .due-text,
   .end-text {
-    font-size: 0.55rem;
-    line-height: 1.1;
+    font-size: 0.5rem;
+    line-height: 1.15;
+    font-weight: 700;
   }
   
   .due-date-marker,
   .statement-end-marker {
-    min-height: 30px;
-    padding: 3px 2px;
+    min-height: 28px;
+    padding: 3px 3px;
+    left: 1px;
+    right: 1px;
+  }
+  
+  .due-date-marker {
+    border-width: 1.5px;
   }
   
   .billing-cycle-explanation {
