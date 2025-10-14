@@ -7,27 +7,26 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header-content">
-        <Link to="/" className="logo">
-          <CreditCard className="logo-icon" />
-          <span>Credit Card Tracker</span>
-        </Link>
-        
         <nav className="nav">
+          <Link to="/" className="nav-link logo-link">
+            <CreditCard className="nav-icon" />
+            <span>Home</span>
+          </Link>
           <Link to="/my-cards" className="nav-link">
             <Wallet className="nav-icon" />
-            My Cards
+            <span>My Cards</span>
           </Link>
           <Link to="/rewards-optimizer" className="nav-link">
             <TrendingUp className="nav-icon" />
-            Rewards Optimizer
+            <span>Rewards</span>
           </Link>
           <Link to="/payment-tracking" className="nav-link">
             <Bell className="nav-icon" />
-            Payment Tracking
+            <span>Payments</span>
           </Link>
           <Link to="/settings" className="nav-link">
             <Settings className="nav-icon" />
-            Settings
+            <span>Settings</span>
           </Link>
         </nav>
       </div>
