@@ -743,3 +743,42 @@
   color: #94a3b8;
 }
 
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .optimizer-controls {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .control-group select,
+  .control-group input {
+    font-size: 0.875rem;
+    padding: 0.625rem;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .control-group select option {
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  
+  .spending-inputs {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .tab-navigation {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  
+  .tab-btn {
+    padding: 0.625rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
