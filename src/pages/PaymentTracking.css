@@ -299,10 +299,10 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 1px;
+  grid-auto-rows: minmax(100px, auto);
 }
 
 .calendar-day {
-  aspect-ratio: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -314,6 +314,7 @@
   transition: all 0.2s ease;
   position: relative;
   min-height: 100px;
+  height: auto;
 }
 
 .calendar-day:hover {

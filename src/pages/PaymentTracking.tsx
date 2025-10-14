@@ -583,10 +583,15 @@ const PaymentTracking: React.FC = () => {
                         isSameDay(day, period.statementEnd)
                       );
                       
+                      // Calculate required height for this day
+                      const totalItems = statementPeriods.length + dueDates.length + statementEnds.length;
+                      const minHeight = Math.max(100, 20 + (totalItems * 30));
+                      
                       return (
                         <div 
                           key={index} 
                           className={`calendar-day ${!isCurrentMonth ? 'other-month' : ''} ${isToday ? 'today' : ''}`}
+                          style={{ minHeight: `${minHeight}px` }}
                         >
                           <span className="day-number">{format(day, 'd')}</span>
                           
@@ -612,7 +617,6 @@ const PaymentTracking: React.FC = () => {
                               {(() => {
                                 const statementBarCount = statementPeriods.length;
                                 const startTop = 20 + (statementBarCount * 20) + 2;
-                                const availableHeight = 120 - startTop - 2;
                                 
                                 // Combine all important dates
                                 const allImportantDates = [
@@ -620,8 +624,8 @@ const PaymentTracking: React.FC = () => {
                                   ...statementEnds.map(period => ({ ...period, type: 'close' }))
                                 ];
                                 
-                                // Calculate height for each marker - allow for text wrapping
-                                const markerHeight = Math.max(30, availableHeight / allImportantDates.length - 2);
+                                // Calculate height for each marker - fixed small height
+                                const markerHeight = 28;
                                 
                                 return allImportantDates.map((period, idx) => {
                                   const topPosition = startTop + idx * (markerHeight + 2);
