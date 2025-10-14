@@ -821,5 +821,9 @@
   .combined-rewards .cashback-part {
     display: block;
   }
+  
+  .combined-rewards .separator {
+    display: none;
+  }
 }
 

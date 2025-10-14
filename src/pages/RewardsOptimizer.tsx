@@ -853,7 +853,7 @@ const RewardsOptimizer: React.FC = () => {
                                               return (
                                                 <>
                                                   <span className="points-part">{data.points.toLocaleString()} points</span>
-                                                  <span> / </span>
+                                                  <span className="separator"> / </span>
                                                   <span className="cashback-part">${data.cashBack.toFixed(2)} cash back</span>
                                                 </>
                                               );
