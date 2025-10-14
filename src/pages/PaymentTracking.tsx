@@ -646,7 +646,7 @@ const PaymentTracking: React.FC = () => {
                               {/* All important dates - fill remaining space */}
                               {(() => {
                                 const statementBarCount = statementPeriods.length;
-                                const startTop = 20 + (statementBarCount * 10) + 2;
+                                const startTop = 20 + (statementBarCount * 10) + 5;
                                 
                                 // Combine all important dates
                                 const allImportantDates = [
