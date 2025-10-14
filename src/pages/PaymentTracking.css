@@ -1065,14 +1065,18 @@
   .due-text,
   .end-text {
     font-size: 0.5rem;
-    line-height: 1.15;
+    line-height: 1.1;
     font-weight: 700;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   
   .due-date-marker,
   .statement-end-marker {
-    min-height: 28px;
-    padding: 3px 3px;
+    min-height: 38px;
+    height: auto;
+    padding: 4px 3px;
     left: 1px;
     right: 1px;
   }
