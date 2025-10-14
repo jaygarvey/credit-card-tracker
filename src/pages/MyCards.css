@@ -599,3 +599,28 @@
   box-shadow: 0 0 0 3px var(--shadow);
 }
 
+/* Dark Mode Overrides */
+[data-theme="dark"] .summary-card h3 {
+  color: #f9fafb !important;
+}
+
+[data-theme="dark"] .summary-number {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .my-cards .cards-summary .summary-card h3 {
+  color: #f9fafb !important;
+}
+
+[data-theme="dark"] .my-cards .cards-summary .summary-card .summary-number {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .cards-summary .summary-card h3 {
+  color: #f9fafb !important;
+}
+
+[data-theme="dark"] .cards-summary .summary-card .summary-number {
+  color: #ffffff !important;
+}
+
