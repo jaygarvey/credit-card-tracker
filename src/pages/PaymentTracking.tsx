@@ -654,7 +654,7 @@ const PaymentTracking: React.FC = () => {
                                 ];
                                 
                                 // Calculate height for each marker - increased for mobile to fit text
-                                const markerHeight = 52;
+                                const markerHeight = 56;
                                 const markerGap = 3;
                                 
                                 // Position from bottom upward instead of top downward

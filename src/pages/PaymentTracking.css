@@ -1064,20 +1064,19 @@
   
   .due-text,
   .end-text {
-    font-size: 0.45rem;
-    line-height: 1.15;
+    font-size: 0.4rem;
+    line-height: 1.2;
     font-weight: 600;
     max-width: 100%;
-    overflow-wrap: break-word;
-    word-break: normal;
+    white-space: normal;
     display: block;
   }
   
   .due-date-marker,
   .statement-end-marker {
-    min-height: 52px;
+    min-height: 56px;
     height: auto;
-    padding: 6px 3px;
+    padding: 7px 4px;
     left: 1px;
     right: 1px;
     display: flex;
