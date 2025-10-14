@@ -214,6 +214,10 @@
   font-weight: 600;
 }
 
+.view-toggle-mobile {
+  display: none;
+}
+
 .card-selection {
   margin-bottom: 0;
   padding: 0.125rem;
@@ -1007,12 +1011,37 @@
     overflow-x: visible;
   }
   
+  .view-toggle-mobile {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 0.75rem 0;
+  }
+  
+  .view-btn {
+    padding: 0.5rem 1rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .view-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+  
   .calendar-grid {
     width: 100%;
   }
   
   .calendar-day {
-    min-height: 60px;
+    min-height: 80px;
     padding: 0.25rem;
   }
   
@@ -1027,6 +1056,10 @@
   .payment-dot {
     width: 5px;
     height: 5px;
+  }
+  
+  .calendar-header h2 {
+    font-size: 0.875rem;
   }
   
   .billing-cycle-explanation {

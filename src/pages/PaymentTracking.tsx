@@ -21,6 +21,7 @@ const PaymentTracking: React.FC = () => {
     overdueDays: 0
   });
   const [exportDuration, setExportDuration] = useState(12); // months
+  const [calendarView, setCalendarView] = useState<'month' | 'week'>('month');
 
   useEffect(() => {
     const savedCards = localStorage.getItem('userCards');
@@ -411,24 +412,37 @@ const PaymentTracking: React.FC = () => {
 
   // Generate calendar days
   const generateCalendarDays = () => {
-    const monthStart = startOfMonth(calendarMonth);
-    const monthEnd = endOfMonth(calendarMonth);
-    
-    // Get the first day of the week for the month (0 = Sunday, 1 = Monday, etc.)
-    const firstDayOfWeek = monthStart.getDay();
-    
-    // Calculate the start of the calendar (go back to include previous month's days)
-    const calendarStart = new Date(monthStart);
-    calendarStart.setDate(calendarStart.getDate() - firstDayOfWeek);
-    
-    // Calculate the end of the calendar (go forward to include next month's days)
-    const lastDayOfWeek = monthEnd.getDay();
-    const daysToAdd = 6 - lastDayOfWeek; // Days needed to complete the last week
-    const calendarEnd = new Date(monthEnd);
-    calendarEnd.setDate(calendarEnd.getDate() + daysToAdd);
-    
-    // Generate all days for the calendar grid (including empty slots)
-    return eachDayOfInterval({ start: calendarStart, end: calendarEnd });
+    if (calendarView === 'week') {
+      // Week view - show current week only
+      const dayOfWeek = calendarMonth.getDay();
+      const weekStart = new Date(calendarMonth);
+      weekStart.setDate(weekStart.getDate() - dayOfWeek);
+      
+      const weekEnd = new Date(weekStart);
+      weekEnd.setDate(weekEnd.getDate() + 6);
+      
+      return eachDayOfInterval({ start: weekStart, end: weekEnd });
+    } else {
+      // Month view - show full month
+      const monthStart = startOfMonth(calendarMonth);
+      const monthEnd = endOfMonth(calendarMonth);
+      
+      // Get the first day of the week for the month (0 = Sunday, 1 = Monday, etc.)
+      const firstDayOfWeek = monthStart.getDay();
+      
+      // Calculate the start of the calendar (go back to include previous month's days)
+      const calendarStart = new Date(monthStart);
+      calendarStart.setDate(calendarStart.getDate() - firstDayOfWeek);
+      
+      // Calculate the end of the calendar (go forward to include next month's days)
+      const lastDayOfWeek = monthEnd.getDay();
+      const daysToAdd = 6 - lastDayOfWeek; // Days needed to complete the last week
+      const calendarEnd = new Date(monthEnd);
+      calendarEnd.setDate(calendarEnd.getDate() + daysToAdd);
+      
+      // Generate all days for the calendar grid (including empty slots)
+      return eachDayOfInterval({ start: calendarStart, end: calendarEnd });
+    }
   };
 
   const upcomingReminders = reminders.filter(r => !r.isPaid && differenceInDays(r.dueDate, currentDate) >= 0);
@@ -553,9 +567,25 @@ const PaymentTracking: React.FC = () => {
                   <button className="calendar-nav-btn" onClick={goToPreviousMonth}>
                     <ChevronLeft size={20} />
                   </button>
-                  <h2>{format(calendarMonth, 'MMMM yyyy')}</h2>
+                  <h2>{format(calendarMonth, calendarView === 'week' ? "'Week of' MMM d, yyyy" : 'MMMM yyyy')}</h2>
                   <button className="calendar-nav-btn" onClick={goToNextMonth}>
                     <ChevronRight size={20} />
+                  </button>
+                </div>
+                
+                {/* View Toggle - Mobile Only */}
+                <div className="view-toggle-mobile">
+                  <button 
+                    className={`view-btn ${calendarView === 'month' ? 'active' : ''}`}
+                    onClick={() => setCalendarView('month')}
+                  >
+                    Month
+                  </button>
+                  <button 
+                    className={`view-btn ${calendarView === 'week' ? 'active' : ''}`}
+                    onClick={() => setCalendarView('week')}
+                  >
+                    Week
                   </button>
                 </div>
                 
