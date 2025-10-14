@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/credit-card-tracker/static/css/main.0dd728c0.css",
-    "main.js": "/credit-card-tracker/static/js/main.da1c07e7.js",
+    "main.js": "/credit-card-tracker/static/js/main.26394cec.js",
     "index.html": "/credit-card-tracker/index.html",
     "main.0dd728c0.css.map": "/credit-card-tracker/static/css/main.0dd728c0.css.map",
-    "main.da1c07e7.js.map": "/credit-card-tracker/static/js/main.da1c07e7.js.map"
+    "main.26394cec.js.map": "/credit-card-tracker/static/js/main.26394cec.js.map"
   },
   "entrypoints": [
     "static/css/main.0dd728c0.css",
-    "static/js/main.da1c07e7.js"
+    "static/js/main.26394cec.js"
   ]
 }
