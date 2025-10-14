@@ -635,7 +635,7 @@ const PaymentTracking: React.FC = () => {
                                   className="statement-bar"
                                   style={{ 
                                     backgroundColor: period.cardColor,
-                                    top: `${20 + idx * 20}px`
+                                    top: `${20 + idx * 11}px`
                                   }}
                                   title={`${period.cardName}: ${format(period.statementStart, 'MMM dd')} - ${format(period.statementEnd, 'MMM dd')}`}
                                 >
@@ -646,7 +646,7 @@ const PaymentTracking: React.FC = () => {
                               {/* All important dates - fill remaining space */}
                               {(() => {
                                 const statementBarCount = statementPeriods.length;
-                                const startTop = 20 + (statementBarCount * 20) + 2;
+                                const startTop = 20 + (statementBarCount * 11) + 2;
                                 
                                 // Combine all important dates
                                 const allImportantDates = [
