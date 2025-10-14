@@ -626,13 +626,13 @@
 }
 
 .category-name {
-  color: #f1f5f9;
+  color: #1e293b;
   font-weight: 500;
   font-size: 0.875rem;
 }
 
 .spending-amount {
-  color: #94a3b8;
+  color: #64748b;
   font-size: 0.75rem;
 }
 
@@ -733,5 +733,13 @@
 [data-theme="dark"] .breakdown-item {
   background: #1e293b;
   border: 1px solid #334155;
+}
+
+[data-theme="dark"] .category-name {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .spending-amount {
+  color: #94a3b8;
 }
 
