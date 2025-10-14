@@ -89,9 +89,9 @@
     overflow-x: scroll;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding: 0.5rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--bg-tertiary);
+    padding: 0.5rem 0 1rem 0;
     flex: 1;
     justify-content: flex-start;
     scroll-snap-type: none;
@@ -99,7 +99,22 @@
   }
   
   .nav::-webkit-scrollbar {
-    display: none;
+    height: 6px;
+    display: block;
+  }
+  
+  .nav::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+    border-radius: 3px;
+  }
+  
+  .nav::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 3px;
+  }
+  
+  .nav::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-hover);
   }
   
   .nav-link {
