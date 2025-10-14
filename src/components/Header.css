@@ -91,11 +91,13 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
     scrollbar-color: var(--accent) var(--bg-tertiary);
-    padding: 0.5rem 0 1rem 0;
+    padding: 0.5rem 0;
     flex: 1;
     justify-content: flex-start;
     scroll-snap-type: none;
     scroll-behavior: auto;
+    position: relative;
+    background: linear-gradient(to right, transparent 90%, rgba(59, 130, 246, 0.1) 100%);
   }
   
   .nav::-webkit-scrollbar {
