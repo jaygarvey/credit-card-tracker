@@ -574,11 +574,11 @@
 }
 
 .reward-total {
-  background: #1e293b;
+  background: #f8fafc;
   border-radius: 0.75rem;
   padding: 1.5rem;
   text-align: center;
-  border: 1px solid #334155;
+  border: 1px solid #e2e8f0;
 }
 
 .reward-label {
@@ -613,9 +613,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: #1e293b;
+  background: #f8fafc;
   border-radius: 0.5rem;
-  border: 1px solid #334155;
+  border: 1px solid #e2e8f0;
   margin-bottom: 0.5rem;
 }
 
@@ -723,5 +723,15 @@
 
 [data-theme="dark"] .category-rewards-breakdown h4 {
   color: #f9fafb !important;
+}
+
+[data-theme="dark"] .reward-total {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+[data-theme="dark"] .breakdown-item {
+  background: #1e293b;
+  border: 1px solid #334155;
 }
 
