@@ -626,13 +626,13 @@
 }
 
 .category-name {
-  color: #1e293b;
+  color: #000000;
   font-weight: 500;
   font-size: 0.875rem;
 }
 
 .spending-amount {
-  color: #64748b;
+  color: #000000;
   font-size: 0.75rem;
 }
 
